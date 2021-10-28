@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class UIManager : MonoBehaviour
+{   
+    [SerializeField]
+    private Text ammoText;
+
+    [SerializeField]
+    private GameObject coinCollect;
+    // Update is called once per frame
+    public void UpdateAmmo(int count)
+    {
+        ammoText.text = "Ammo: " + count;
+    }
+    public void Collected()
+    {
+        coinCollect.SetActive(true);
+    }
+    public void Remove()
+    {
+        coinCollect.SetActive(false);
+    }
+}
